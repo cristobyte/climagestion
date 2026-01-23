@@ -5,6 +5,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
+    host: true,
+    allowedHosts: ['.trycloudflare.com'],
   },
   optimizeDeps: {
     include: ['@hvac/shared'],
