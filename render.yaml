@@ -27,7 +27,6 @@ services:
   - type: web
     name: climagestion-web
     runtime: static
-    plan: free
     branch: main
     buildCommand: npm install && npm run build:shared && npm run build:frontend
     staticPublishPath: packages/frontend/dist
