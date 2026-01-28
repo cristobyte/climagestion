@@ -18,6 +18,6 @@
     "db:seed": "npm run db:seed -w @hvac/backend"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "20.x"
   }
 }
