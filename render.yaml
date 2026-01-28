@@ -8,7 +8,6 @@ services:
     branch: main
     buildCommand: npm install --include=dev && npm run build:shared && npm run build:backend
     startCommand: npm run start:prod -w @hvac/backend
-    healthCheckPath: /
     envVars:
       - key: NODE_ENV
         value: production
