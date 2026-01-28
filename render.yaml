@@ -6,7 +6,7 @@ services:
     region: oregon
     plan: free
     branch: main
-    buildCommand: npm install && npm run build:shared && npm run build:backend
+    buildCommand: npm install --include=dev && npm run build:shared && npm run build:backend
     startCommand: npm run start:prod -w @hvac/backend
     healthCheckPath: /
     envVars:
@@ -28,7 +28,7 @@ services:
     name: climagestion-web
     runtime: static
     branch: main
-    buildCommand: npm install && npm run build:shared && npm run build:frontend
+    buildCommand: npm install --include=dev && npm run build:shared && npm run build:frontend
     staticPublishPath: packages/frontend/dist
     envVars:
       - key: VITE_API_URL
